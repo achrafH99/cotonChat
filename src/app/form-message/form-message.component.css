@@ -1,0 +1,16 @@
+html {
+  height: 70vh;
+
+}
+.sended,.received{overflow-wrap: break-word; max-width: 300px; border-radius: 5px; padding: 5px; text-align: center;margin-top: 2%;opacity: 0.8;overflow: auto;}
+.sended p, .received p{ display:inline-block;}
+.sended{background-color: #32E5F9;margin-left: 40%;}
+.received{background-color: greenyellow;margin-right: 40%;}
+.messages{overflow: auto;max-height: 300px;width: 400px;margin: 0px;height: 300px;top:10px;border:1px red solid; display:block;}
+form{position:absolute;}
+.details{font-size: x-small;}
+.submit{border-radius: 2px; background-color: #D1F3F7;border: none;height:30px}
+.submit:hover{background-color: #32E5F9;}
+.submit:disabled{background-color: #AEAFAF;}
+.user{font-size: x-small;vertical-align:text-bottom;}
+

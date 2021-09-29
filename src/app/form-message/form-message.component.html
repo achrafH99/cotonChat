@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="messages" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+  <div *ngFor="let item of messageService.getMessages()" [ngClass]="item.sender == name ? 'sended' : 'received'" ><p class="user">{{item.sender}} </p> {{item.message}} <p class="details"> {{item.date | date:'short'}}</p></div>
+  </div>
+  <form #messageForm = "ngForm" (ngSubmit)="onSubmit(messageForm.value)">
+    <h2>{{name}}</h2>
+    <p>message :</p>
+    <textarea id="message" name="message" rows="6" cols="50" [(ngModel)]="message" required></textarea>
+    <br>
+    <input type="submit" value="Envoyer" class="submit" [disabled]="!message" name="submit">
+  </form>
+</body>
+</html>
